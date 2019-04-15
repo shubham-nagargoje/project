@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Registration Form</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="Heading1">
+
+    <h1>Registration Form</h1>
+
+
+  </div>
+
+  <div>
+    <form class="formStructure" action="index.html" method="post">
+
+      <!-- First Name -->
+      <tr>
+        <label>First Name: </label><br>
+        <input type="text" name="firstName" value="">
+      </tr>
+
+
+      <br>
+      <!-- Middle Name -->
+      <label>Middle Name: </label><br>
+      <input type="text" name="middleName" value="">
+
+      <br>
+      <!-- Last Name -->
+      <label>Last Name:</label><br>
+      <input type="text" name="lastName" value="">
+
+      <br>
+      <!-- Contact Nunber -->
+      <label>Contact Number:</label><br>
+      <input type="tel" name="contactNumber" value="">
+      <!-- change to suitable type if found -->
+
+      <br>
+      <!-- Email Id -->
+      <label>Email Id:</label><br>
+      <input type="email" name="emailId" value="">
+
+      <br>
+      <!-- Gender -->
+      <label for="gender">Gender:</label><br>
+      <input type="radio" id="genderChoice1" name="gender" value="male">
+      <label for="gender"> Male </label>
+
+      <input type="radio" id="genderChoice2" name="gender" value="female">
+      <label for="gender"> Female </label>
+
+      <input type="radio" id="genderChoice3" name="gender" value="other">
+      <label for="Gender"> Other </label>
+
+
+      <br>
+      <!-- Branch -->
+      <label for="">Branch:</label><br>
+      <select class="" name="Branch">
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ENTC">ENTC</option>
+        <option value="MECH">MECH</option>
+        <option value="CIVIL">CVIL</option>
+      </select>
+
+      <br>
+
+      <label for="">Address:</label><br>
+      <textarea name="Address" rows="8" cols="80"></textarea>
+
+      <br>
+
+      <input type="submit" class="submitBtn" name="Submit">
+      <input type="reset" class="resetBtn" name="Reset">
+
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+Create a webpage for providing a feedback to Government
+about your city and changes you wish to see in your city, using
+HTML Forms and CSS
+a) Create sufficient Labels and Text box to enter the user
+details (First name, last name, DOB, Email, Phone No,
+Gender, and Description Box for feedback)
+b) Validate using JavaScript/JQuery
+c) Use CSS for content display and management
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body
+		{	
+			background-color: #abcdef;
+			color: #112121;
+			font-family: cursive;
+			text-align: center;
+		}
+	</style>
+	<title> Government Feedback </title>
+	<script>
+			function val()
+			{
+				var a = document.feedback.fn.value;
+				var b = document.feedback.ln.value;
+				var c = document.feedback.dob.value;
+				var d = document.feedback.email.value;
+				var e = document.feedback.ph_no.value;
+				var f = document.feedback.gender.value;
+				var atpos = d.indexOf("@");
+				var dotpos = d.lastIndexOf(".");
+				var sppos = d.indexOf(" ");
+				if(a == "" || b == "" || c == "" || d == "" || e == "" || f == "")
+					alert("Please enter all the fields!");
+				if((d.length - dotpos) == 1 || atpos <sppos != -1  )
+					alert("Enter valid mail address");
+				if(isNaN(e))
+					alert("Enter valid phone number");
+				if(isNaN(c))
+					alert("Enter valid DOB");
+				if(atpos < 1 || dotpos < 1 || (dotpos - atpos) <= 1 )
+					alert("Enter valid mail address");
+				if(e != "male" || e != "Male" || e != "MALE" || e != "Female" || e != "female" || e != "FEMALE" ||)
+					alert("Enter valid gender")
+				else
+					alert("success");
+			}
+		</script>
+</head>
+<body>
+	<form name="feedback" onsubmit="val()">
+		<table>
+			<tr>
+				<td>First Name :-</td>
+				<td><input type="text" name="fn"></td>
+			</tr>
+			<tr>
+				<td>Last Name :-</td>
+				<td><input type="text" name="ln"></td>
+			</tr>
+			<tr>
+				<td>DOB :-</td>
+				<td><input type="number" name="dob"></td>
+			</tr>
+			<tr>
+				<td>Email :-</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Phone No :-</td>
+				<td><input type="number" name="ph_no"></td>
+			</tr>
+			<tr>
+				<td>Gender :-</td>
+				<td><input type="text" name="gender"></td>
+			</tr>
+			<tr>
+				<td>Description:- </td>
+				<td><textarea name = desc rows ="10" cols="30"></textarea></td>
+			</tr>
+			<tr>
+				<td><button type = "submit">Submit</button><br></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

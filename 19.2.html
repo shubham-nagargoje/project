@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Gateway</title>
+	<script type="text/javascript">
+		function val()
+		{
+			var c = document.f2.card.value;
+			var cv = document.f2.cvv.value;
+			if(c == "" || cv == "")
+			{
+				alert("Enter all fields");
+				return false;
+			}
+			if(c.length != 16)
+			{
+				alert("Enter valid Card number");
+				return false;
+			}
+			if(cv.length < 3 || cv.length > 4)
+			{
+				alert("Enter valid CVV");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<form action="success.html" name="f2" onsubmit="return(val())">
+			<tr>
+				<td>Credit/Debit Card -</td>
+				<td><input type="number" name="card"></td>
+			</tr> 
+			<tr>
+				<td>CVV</td>
+				<td><input type="number" name="cvv"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Pay"></td>
+			</tr>
+		</form>	
+	</table>
+</body>
+</html>

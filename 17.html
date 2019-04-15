@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Card</title>
+</head>
+<body>
+	<h1 align="center">Report Card</h1>
+	<form name="frm">
+		<table border="1" align="center">
+		<tr><td>Enter Name:</td><td><input type="text" name="name1"></td></tr>
+		<tr><td>Enter Marks of First Subject:</td><td><input type="text" name="first"></td></tr>
+		<tr><td>Enter Marks of Second Subject:</td><td><input type="text" name="second"></td></tr>
+		<tr><td>Enter Marks of Third Subject:</td><td><input type="text" name="third"></td></tr>
+		<tr><td>Enter Marks of Fourth Subject:</td><td><input type="text" name="fourth"></td></tr>
+		<tr><td>Enter Marks of Fifth Subject:</td><td><input type="text" name="fifth"></td></tr>
+		<tr><td>Percentage</td><td><input type="text" id="percent">
+		</table>
+	</form>
+	<br>
+	<center>
+	<button onclick="calculate()">Calculate</button>
+	</center>
+</body>
+<script type="text/javascript">
+	function calculate()
+	{
+	var name = document.frm.name1.value;
+	var fi = (document.frm.first.value);
+	var se = (document.frm.second.value);
+	var th = (document.frm.third.value);
+	var fo = (document.frm.fourth.value);
+	var fif = (document.frm.fifth.value);
+	var percentage = (parseInt(fi)+parseInt(se)+parseInt(th)+parseInt(fo)+parseInt(fif));
+
+	 percentage = percentage /5 ;
+	document.getElementById("percent").value=percentage;
+}
+
+	</script>
+</html>
